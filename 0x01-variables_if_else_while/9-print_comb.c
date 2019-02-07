@@ -13,8 +13,11 @@ int main(void)
 	for (c = 48 ; c <= 57; c++)
 	{
 		putchar(c);
-		putchar(44);
-		putchar(32);
+		if (c < 57)
+		{
+			putchar(44);
+			putchar(32);
+		}
 	}
 	putchar('\n');
 	return (0);

@@ -19,10 +19,10 @@ int main(void)
 	l = n % 10;
 	if (l > 5)
 		printf(" is %d and is greater than 5\n", l);
-	if (l == 0 )
+	if (l == 0)
 	{
 		printf(" is %d and is 0\n", l);
-	}else
+	} else
 	{
 	if (l < 6)
 		printf(" is %d and is less than 6 and not 0\n", l);

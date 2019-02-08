@@ -19,14 +19,14 @@ int main(void)
 	{
 	for (a = b; a <= 57; a++)
 	{
-	for (f = c+1; f <= 57 ; f++)
+	for (f = c + 1; f <= 57 ; f++)
 	{
 		putchar(b);
 		putchar(c);
 		putchar(32);
 		putchar(a);
 		putchar(f);
-		if (c + b + a +f < 227)
+		if (c + b + a + f < 227)
 		{
 			putchar(44);
 			putchar(32);

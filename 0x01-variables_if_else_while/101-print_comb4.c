@@ -17,7 +17,7 @@ int main(void)
 	for (c = b + 1; c <= 57; c++)
 	{
 	for (a = c + 1; a <= 57; a++)
-	{	
+	{
 		putchar(b);
 		putchar(c);
 		putchar(a);

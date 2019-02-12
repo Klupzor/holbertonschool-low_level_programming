@@ -1,21 +1,18 @@
 #include "holberton.h"
-/* more headers goes there */
-
 /**
- * main - Entry point
+ * print_alphabet - writes the alphabet in lowercase
  *
- * Return: Always 0 (Success)
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
  */
-int main(void)
+
+void print_alphabet(void)
 {
 	char a;
 
 	for (a = 'a' ; a <= 'z' ; a++)
 	{
-
 		_putchar(a);
-
 	}
 	_putchar('\n');
-	return (0);
 }

@@ -1,4 +1,3 @@
-#include <ctype.h>
 /**
  * _islower - return 1 if c is lowwercase else return 0
  *@c: Character input
@@ -8,7 +7,7 @@
 
 int _islower(int c)
 {
-	if (islower(c))
+	if (c >= 97 && c <= 122)
 		return (1);
 	return (0);
 }

@@ -19,5 +19,4 @@ void main(void)
 			printf("%i", c);
 		printf(" ");
 	}
-	printf("\n");
 }

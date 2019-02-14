@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * print_giagonal - print diagonal line whit space n
+ * print_diagonal - print diagonal line whit space n
  *
  *@n: Numbers of lines.
  * Return: On success result.

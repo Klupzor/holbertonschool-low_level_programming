@@ -5,7 +5,7 @@
  * Return: On success result.
  * On error, -1 is returned, and errno is set appropriately.
  */
-void main(void)
+int main(void)
 {
 	int c;
 
@@ -19,4 +19,5 @@ void main(void)
 			printf("%i", c);
 		printf(" ");
 	}
+	return (0);
 }

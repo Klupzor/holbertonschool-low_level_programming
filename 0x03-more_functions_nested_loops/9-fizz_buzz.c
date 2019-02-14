@@ -20,5 +20,6 @@ int main(void)
 		if (c < 100)
 			printf(" ");
 	}
+	printf("\n");
 	return (0);
 }

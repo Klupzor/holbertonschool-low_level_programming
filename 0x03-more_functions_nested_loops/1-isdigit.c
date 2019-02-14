@@ -1,13 +1,13 @@
 /**
- * _isupper - Evaluate if character is a uppercase
+ * _isdigit - evaluate if character is a number 9 - 0
  * @c: The character to print
  *
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
-int _isupper(int c)
+int _isdigit(char c)
 {
-	if (c >= 65 && c <= 90)
+	if (c >= 48 && c <= 57)
 		return (1);
 	else
 		return (0);

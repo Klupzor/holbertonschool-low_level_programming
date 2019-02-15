@@ -10,14 +10,14 @@ void print_number(int n)
 {
 	int cont = 1;
 	int pot = 1;
-	int r;
+	int r, num;
 
 	if (n < 0)
 	{
 		_putchar('-');
 		n = n * -1;
 	}
-	int num = n;
+	num = n;
 
 	while (n / 10 > 0)
 	{

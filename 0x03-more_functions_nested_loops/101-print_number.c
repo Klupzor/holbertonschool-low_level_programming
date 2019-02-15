@@ -10,7 +10,7 @@ void print_number(int n)
 {
 	int cont = 1;
 	int pot = 1;
-	int r, num;
+	unsigned int r, num;
 
 	if (n < 0)
 	{

@@ -2,6 +2,7 @@
 /**
  * print_number - print number whit char.
  *
+ * @n: Number.
  * Return: On success result.
  * On error, -1 is returned, and errno is set appropriately.
  */

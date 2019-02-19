@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * _strlen - return lengh of string.
+ * _puts - display a string.
  *
  * @s: char string.
  * Return: Always 0.

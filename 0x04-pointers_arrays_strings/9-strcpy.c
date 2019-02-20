@@ -13,7 +13,7 @@ char *_strcpy(char *s, char *a)
 	for (i = 0 ; a[i] != '\0' ; i++)
 	{
 	}
-	for (c = 0 ; c < i ; c++)
+	for (c = 0 ; c <= i ; c++)
 	{
 		s[c] = a[c];
 	}

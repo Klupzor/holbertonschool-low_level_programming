@@ -1,0 +1,20 @@
+#include "holberton.h"
+/**
+ * puts_half - display a half  string.
+ *
+ * @s: char string.
+ * Return: Always 0.
+ */
+void puts_half(char *s)
+{
+	int i, c;
+
+	for (i = 0; s[i] != '\0'; i++)
+	{
+	}
+	for (c = i / 2; s[c] != '\0'; c++)
+	{
+		_putchar(s[c]);
+	}
+	_putchar('\n');
+}

@@ -7,12 +7,13 @@
  */
 void puts_half(char *s)
 {
-	int i, c;
+	int i, c, d;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
 	}
-	for (c = i / 2; s[c] != '\0'; c++)
+	d = i / 2;
+	for (c = d; s[c] != '\0'; c++)
 	{
 		_putchar(s[c]);
 	}

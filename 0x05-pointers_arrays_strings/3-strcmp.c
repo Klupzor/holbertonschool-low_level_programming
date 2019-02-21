@@ -1,29 +1,20 @@
 /**
  * _strcmp - prints concat string whit n bytes.
  *
- * @dest: char dest.
- * @src: copy char string.
- * @n: bytes.
- * Return: char.
+ * @s1: char 1.
+ * @s2: char 2.
+ * Return: compare.
  */
-char *_strncat(char *dest, char *src, int n)
+int _strcmp(char *s1, char *s2)
 {
-	int c, i, cont = 0;
+	int i;
 
-	n *= 8;
-	for (i = 0 ; dest[i] != '\0' ; i++)
+	for (i = 0 ; s1[i] != '\0' ; i++)
 	{
-	}
-	for (c = i ; src[cont] != '\0'; c++)
-	{
-		if (c < n - 1)
+		if (s1[i] != s2[i])
 		{
-			dest[c] = src[cont];
-			cont++;
+			return (s1[i] - s2[i]);
 		}
-		else
-			break;
 	}
-	dest[c] = '\0';
-	return (dest);
+	return (0);
 }

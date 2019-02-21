@@ -1,5 +1,5 @@
 /**
- * _strncat - prints concat string whit n bytes.
+ * _strcmp - prints concat string whit n bytes.
  *
  * @dest: char dest.
  * @src: copy char string.
@@ -10,12 +10,13 @@ char *_strncat(char *dest, char *src, int n)
 {
 	int c, i, cont = 0;
 
+	n *= 8;
 	for (i = 0 ; dest[i] != '\0' ; i++)
 	{
 	}
 	for (c = i ; src[cont] != '\0'; c++)
 	{
-		if (cont < n)
+		if (c < n - 1)
 		{
 			dest[c] = src[cont];
 			cont++;

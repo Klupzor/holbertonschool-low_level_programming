@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * cap_string -Separators of words: space, tabulation, new line, ,, ;, ., !, ?, ", (, ), {, and }.
+ * cap_string - Capitalize text.
  *
  * @s: char to capitalize.
  * Return: Converted.
@@ -11,8 +11,10 @@ char *cap_string(char *s)
 
 	for (i = 0 ; s[i] != '\0' ; i++)
 	{
-		if (s[i] == ',' || s[i] == ';' || s[i] == '.' || s[i] == '!' || s[i] == '?' || 
-		s[i] == '"' || s[i] == '(' || s[i] == ')' || s[i] == '{' || s[i] == '}' || s[i] == 9 || s[i] == ' '|| s[i] == '\n')
+		if (s[i] == ',' || s[i] == ';' || s[i] == '.' ||
+		s[i] == '!' || s[i] == '?' || s[i] == '"' || s[i] == '(' ||
+		s[i] == ')' || s[i] == '{' || s[i] == '}' || s[i] == 9 ||
+		s[i] == ' ' || s[i] == '\n')
 			if (s[i + 1] >= 97 && s[i + 1] <= 122)
 				s[i + 1] -= 32;
 	}

@@ -2,7 +2,8 @@
 /**
  * reverse_array - prints reverse  int array.
  *
- * @i: int array;
+ * @s: string;
+ * @n: int size of string;
  */
 void reverse_array(int *s, int n)
 {

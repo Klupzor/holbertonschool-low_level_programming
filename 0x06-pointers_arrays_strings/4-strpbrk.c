@@ -1,14 +1,15 @@
 /**
- * _strchr -locates a charter in a string.
+ * _strpbrk -searches a string for any of a set of bytes.
  *
  *@s: pointer wtih char
- *@c: char to find.
+ *@a: char to find.
  * Return: Always 0.
  */
 
 char *_strpbrk(char *s, char *a)
 {
 	int i;
+
 	do {
 		for (i = 0 ; a[i] != '\0' ; i++)
 		{

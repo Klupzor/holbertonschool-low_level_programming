@@ -11,6 +11,8 @@ char *_strstr(char *s, char *c)
 {
 	int cont, i, t;
 
+	if (c[0] == '\0')
+		return (s);
 	for (cont = 0 ; c[cont] != '\0' ; cont++)
 	{
 	}

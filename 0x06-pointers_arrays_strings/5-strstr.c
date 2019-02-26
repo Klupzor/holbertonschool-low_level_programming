@@ -18,9 +18,9 @@ char *_strstr(char *s, char *c)
 	{
 		if (s[i] == c[0])
 		{
-			for (t = 0 ; c[t] == s[i + t]; t++)
+			for (t = 0 ; c[t] == s[i + t] && t <= cont; t++)
 			{
-				if (t == cont)
+				if (t == cont - 1)
 					return (s += i);
 			}
 

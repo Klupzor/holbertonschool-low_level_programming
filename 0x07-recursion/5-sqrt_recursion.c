@@ -2,7 +2,6 @@
 
 /**
  * fsqr - extra fuction to solve sqr.
- * _sqrt_recursion - Call fsqr.
  * @i: iteration.
  * @n: number.
  * Return: Always 0.
@@ -16,6 +15,12 @@ int fsqr(int i, int n)
 		return (i);
 	return (-1);
 }
+
+/**
+ * _sqrt_recursion - Call fsqr.
+ * @n: number.
+ * Return: Always 0.
+ */
 
 int _sqrt_recursion(int n)
 {

@@ -20,6 +20,7 @@ char *_strdup(char *str)
 	{
 		array[i] = str[i];
 	}
+	array[i] = '\0';
 	if (array != 0)
 		return (array);
 	return (0);

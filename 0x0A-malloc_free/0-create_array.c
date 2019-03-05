@@ -2,11 +2,11 @@
 #include <stdlib.h>
 
 /**
- * simple_print_buffer - prints buffer in hexa
- * @buffer: the address of memory to print
- * @size: the size of the memory to print
+ * create_array - create a dynamic array.
+ * @size: size of array.
+ * @c: char to fill array
  *
- * Return: Nothing.
+ * Return: ponter array or null.
  */
 
 char *create_array(unsigned int size, char c)
@@ -23,5 +23,5 @@ char *create_array(unsigned int size, char c)
 	{
 		array[i] = c;
 	}
-	return(array);
+	return (array);
 }

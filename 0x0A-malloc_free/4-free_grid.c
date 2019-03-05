@@ -9,7 +9,7 @@
 
 void free_grid(int **array, int i)
 {
-	if (array == NULL || i >= 0)
+	if (array == NULL || i <= 0)
 	{
 		for (; i >= 0 ; i--)
 		{

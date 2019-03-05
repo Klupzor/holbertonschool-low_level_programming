@@ -9,9 +9,11 @@
 
 void free_grid(int **array, int i)
 {
-	if (array == NULL || i <= 0)
+	int cont;
+
+	if (array == NULL || i == 0)
 	{
-		for (; i >= 0 ; i--)
+		for (cont = 0; cont < i ; cont++)
 		{
 			free(array[i]);
 		}

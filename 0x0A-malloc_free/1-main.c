@@ -11,7 +11,7 @@ int main(void)
 {
     char *s;
 
-    s = _strdup("Holberton school");
+    s = _strdup("Hola");
     if (s == NULL)
     {
         printf("failed to allocate memory\n");

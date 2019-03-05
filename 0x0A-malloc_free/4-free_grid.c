@@ -11,7 +11,7 @@ void free_grid(int **array, int i)
 {
 	int cont;
 
-	if (array == NULL || i == 0)
+	if (!(array == NULL || i == 0))
 	{
 		for (cont = 0; cont < i ; cont++)
 		{

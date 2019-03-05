@@ -31,7 +31,7 @@ int **alloc_grid(int col, int row)
 
 	if (col <= 0 || row <= 0)
 		return (NULL);
-	array = (int **) malloc(row * sizeof(int));
+	array = (int **) malloc(row * sizeof(int *));
 	if (array == NULL)
 	{
 		free(array);

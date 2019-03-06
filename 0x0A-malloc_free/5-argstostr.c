@@ -16,7 +16,6 @@ int sz(char *arg)
 	for (t = 0 ; arg[t] != '\0' ; t++)
 	{
 	}
-	printf("size: %i\n", t);
 	return (t);
 }
 
@@ -43,8 +42,7 @@ char *argstostr(int argc, char **argv)
 	}
 
 	col += argc;
-	printf("total: %i\n", col);
-	s = malloc(col + 1 * sizeof(char));
+	s = malloc((col + 1) * sizeof(char));
 
 	for (i = 0 ; i < argc ; i++)
 	{

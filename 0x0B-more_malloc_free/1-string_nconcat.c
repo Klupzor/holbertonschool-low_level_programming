@@ -24,7 +24,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (t2 = 0 ; s2[t2] != '\0' ; t2++)
 	{
 	}
-	printf("t1: %u t2: %u \n", t1, t2);
 	if (n > t2)
 		n = t2;
 

@@ -2,10 +2,11 @@
 #include <stdlib.h>
 
 /**
- * array_range - create an array whit that range.
+ * _realloc - create a new array
  *
- *@min: range min
- *@max: size max
+ *@ptr: universal pointer
+ *@old_size: before size
+ *@new_size: after size
  * Return: pointer.
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
@@ -16,7 +17,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	p = ptr;
 	if (ptr == NULL)
 		return (malloc(new_size));
-	if (new_size == 0 && ptr != NULL) 
+	if (new_size == 0 && ptr != NULL)
 	{
 		free(ptr);
 		return (NULL);
@@ -29,6 +30,17 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		if (res == NULL)
 			return (NULL);
 		for (i = 0 ;  p[i] != '\0' ; i++)
+		{
+			res[i] = p[i];
+		}
+		return (res);
+	}
+	if (old_size > new_size)
+	{
+		res = malloc(new_size);
+		if (res == NULL)
+			return (NULL);
+		for (i = 0 ;  res[i] > new_size ; i++)
 		{
 			res[i] = p[i];
 		}

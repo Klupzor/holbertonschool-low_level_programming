@@ -1,6 +1,33 @@
 #include <stdlib.h>
 #include "dog.h"
 /**
+ * _strdup - create a dynamic copy array.
+ * @str: string to copy
+ *
+ * Return: ponter array or null.
+ */
+
+char *_strdup(char *str)
+{
+	char *array;
+	int i, size;
+
+	if (!str)
+		return (0);
+	for (size = 1 ; str[size] != '\0' ; size++)
+	{
+	}
+	array =  malloc((size * sizeof(char)) + 1);
+	if (array == NULL)
+		return (NULL);
+	for (i = 0 ; str[i] != '\0' ; i++)
+	{
+		array[i] = str[i];
+	}
+	array[i] = '\0';
+	return (array);
+}
+/**
  * new_dog - Creates a new dog.
  *
  *@name: name of dog.
@@ -10,7 +37,8 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *ndog, *cpdog;
+	dog_t *ndog;
+	char *cname, *cowner;
 
 	ndog = malloc(sizeof(dog_t));
 	if (ndog == NULL)
@@ -18,16 +46,21 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(ndog);
 		return (NULL);
 	}
-	cpdog = malloc(sizeof(dog_t));
-	if (cpdog == NULL)
+	cname = _strdup(name);
+	if (cname == NULL)
 	{
-		free(cpdog);
+		free(ndog);
 		return (NULL);
 	}
-	ndog->name = name;
+	cowner = _strdup(owner);
+	if (cowner == NULL)
+	{
+		free(ndog);
+		free(cname);
+		return (NULL);
+	}
+	ndog->name = cname;
 	ndog->age = age;
-	ndog->owner = owner;
-	cpdog->name = name;
-	cpdog->owner = owner;
+	ndog->owner = cowner;
 	return (ndog);
 }

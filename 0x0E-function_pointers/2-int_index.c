@@ -3,7 +3,7 @@
  * int_index - prints position when its true.
  * @array: arrat to print
  * @size: size of array.
- * @cpm: fuction that compare.
+ * @cmp: fuction that compare.
  *
  * Return: position.
  */

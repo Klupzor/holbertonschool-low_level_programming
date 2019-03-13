@@ -19,6 +19,6 @@ int main(int argc, char **argv)
 		exit(98);
 	}
 	res = get_op_func(argv[2]) (atoi(argv[1]), atoi(argv[3]));
-	printf("res: %i\n", res);
+	printf("%i\n", res);
 	return (0);
 }

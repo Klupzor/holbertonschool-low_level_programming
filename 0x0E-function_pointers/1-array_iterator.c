@@ -1,3 +1,4 @@
+#include <stdio.h>
 /**
  * array_iterator - prints an array.
  * @array: arrat to print
@@ -8,7 +9,7 @@
  */
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-	if (array && size && action)
+	if (array)
 	{
 		unsigned int i;
 

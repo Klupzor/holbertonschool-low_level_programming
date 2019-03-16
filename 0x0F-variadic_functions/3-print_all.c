@@ -38,7 +38,12 @@ void p_float(va_list args)
  */
 void p_string(va_list args)
 {
-	printf("%s", va_arg(args, char *));
+	char *s;
+
+	s = va_arg(args, char *);
+	if (s == NULL)
+		s = "(nil)";
+	printf("%s", s);
 }
 
 /**
@@ -57,6 +62,7 @@ void print_all(const char * const format, ...)
 	};
 	va_list args;
 	int fc = 0, pc;
+	char *separ = "";
 
 	va_start(args, format);
 	while (format[fc] != '\0')
@@ -66,13 +72,13 @@ void print_all(const char * const format, ...)
 		{
 			if (*prt[pc].c == format[fc])
 			{
+				printf("%s", separ);
 				prt[pc].tp(args);
+				separ = ", ";
 				break;
 			}
 			pc++;
 		}
-		if (prt[pc + 1].c != NULL && format[fc + 1] != '\0')
-			printf(", ");
 		fc++;
 	}
 	va_end(args);

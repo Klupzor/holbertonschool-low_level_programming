@@ -42,7 +42,10 @@ void p_string(va_list args)
 
 	s = va_arg(args, char *);
 	if (s == NULL)
-		s = "(nil)";
+	{
+		printf("%p", s);
+		return;
+	}
 	printf("%s", s);
 }
 

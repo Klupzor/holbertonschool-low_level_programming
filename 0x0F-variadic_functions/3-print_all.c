@@ -1,27 +1,51 @@
 #include<stdarg.h>
 #include<stdio.h>
 #include "variadic_functions.h"
-
+/**
+ * p_char - print chars.
+ *
+ * @args: Argumentos.
+ */
 void p_char(va_list args)
 {
 	printf("%c", va_arg(args, int));
 }
 
+/**
+ * p_int - print ints.
+ *
+ * @args: Argumentos.
+ */
 void p_int(va_list args)
 {
 	printf("%i", va_arg(args, int));
 }
 
+/**
+ * p_float - print dobles.
+ *
+ * @args: Argumentos.
+ */
 void p_float(va_list args)
 {
 	printf("%f", va_arg(args, double));
 }
 
+/**
+ * p_string - print strings.
+ *
+ * @args: Argumentos.
+ */
 void p_string(va_list args)
 {
 	printf("%s", va_arg(args, char *));
 }
 
+/**
+ * print_all - Print in diferents formats.
+ *
+ * @format: Format to printing.
+ */
 void print_all(const char * const format, ...)
 {
 	typ_t prt[] = {
@@ -47,7 +71,7 @@ void print_all(const char * const format, ...)
 			}
 			pc++;
 		}
-		if (prt[pc].c != NULL && format[fc + 1] != '\0')
+		if (prt[pc + 1].c != NULL && format[fc + 1] != '\0')
 			printf(", ");
 		fc++;
 	}

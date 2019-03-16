@@ -1,9 +1,9 @@
-#include<stdarg.h>
+#include <stdarg.h>
 
 /**
  * sum_them_all - Sum all parameters.
+ * @n: Numbers to sum
  *
- *@n: Numbers to sum
  * Return: Result.
  */
 int sum_them_all(const unsigned int n, ...)

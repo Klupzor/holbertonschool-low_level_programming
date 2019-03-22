@@ -1,13 +1,13 @@
 #include<stdio.h>
-void start(void) __attribute__ ((constructor));
 
+void startfun(void)__attribute__((constructor));
 /**
- * start - Runs before main
+ * startfun - Runs before main
  *
  */
 
-void start(void)
+void startfun(void)
 {
-	printf("You're beat! and yet, you must allow,\n
-		I bore my house upon my back!\n");
+	printf("You're beat! and yet, you must allow,\n");
+	printf("I bore my house upon my back!\n");
 }

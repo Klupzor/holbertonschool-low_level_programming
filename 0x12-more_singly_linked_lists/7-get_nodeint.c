@@ -2,7 +2,7 @@
 
 /**
  * get_nodeint_at_index - print the element of the index list
- * @header: header pointer to the last element of the list.
+ * @head: header pointer to the last element of the list.
  * @index: num of element to return
  *
  *Return: the node on the index list.

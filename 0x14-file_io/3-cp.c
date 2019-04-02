@@ -41,9 +41,14 @@ int main(int argc, char **argv)
 
 	cs = close(fd);
 	csw = close(fdw);
-	if (cs == -1 || csw == -1)
+	if (cs == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fd);
+		exit(100);
+	}
+	if (csw == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fdw);
 		exit(100);
 	}
 	return (0);

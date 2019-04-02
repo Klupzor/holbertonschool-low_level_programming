@@ -12,7 +12,7 @@
 
 int main(int argc, char **argv)
 {
-	int fd, rd, ws, cs;
+	int fd, fdw, rd = 0, ws, cs;
 	char buffer[1024];
 
 	if (argc != 3)
@@ -26,16 +26,21 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, "Error: Can't read from file  %s\n", argv[1]);
 		exit(98);
 	}
-	rd = read(fd, buffer, 1024);
-	close(fd);
-	fd = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
-	ws = write(fd, buffer, rd);
-	if (ws == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to  %s\n", argv[2]);
-		exit(99);
-	}
+
+	fdw = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	do {
+		rd = read(fd, buffer, 1024);
+		ws = write(fdw, buffer, rd);
+		if (ws == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to  %s\n", argv[2]);
+			exit(99);
+		}
+
+	} while (rd == 1024);
+
 	cs = close(fd);
+	cs = close(fdw);
 	if (cs == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fd);

@@ -21,7 +21,7 @@ int create_file(const char *filename, char *text_content)
 	for (strsize = 0 ; text_content[strsize] != '\0' ; strsize++)
 	{
 	}
-	rfile = creat(filename, 0600);
+	rfile = open(filename, O_WRONLY|O_CREAT|O_TRUNC, 0600);
 	if (rfile == -1)
 		return (-1);
 	if (text_content)

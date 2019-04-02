@@ -22,7 +22,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	fd = open(filename, O_RDONLY);
 	num = read(fd, buf, letters);
-	write(1, buf, num);
+	write(STDOUT_FILENO, buf, num);
 	if (num == -1 || fd == -1)
 	{
 		free(buf);

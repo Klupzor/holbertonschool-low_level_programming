@@ -12,7 +12,7 @@
 
 int main(int argc, char **argv)
 {
-	int fd, fdw, rd = 0, ws, cs;
+	int fd, fdw, rd = 0, ws, cs, csw;
 	char buffer[1024];
 
 	if (argc != 3)
@@ -40,8 +40,8 @@ int main(int argc, char **argv)
 	} while (rd == 1024);
 
 	cs = close(fd);
-	cs = close(fdw);
-	if (cs == -1)
+	csw = close(fdw);
+	if (cs == -1 || csw == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fd);
 		exit(100);

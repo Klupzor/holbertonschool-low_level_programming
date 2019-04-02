@@ -13,7 +13,7 @@
 int main(int argc, char **argv)
 {
 	int fd, rd, ws, cs;
-	char *buffer;
+	char buffer[1024];
 
 	if (argc != 3)
 	{
@@ -26,7 +26,6 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, "Error: Can't read from file  %s\n", argv[1]);
 		exit(98);
 	}
-	buffer = malloc(1024);
 	rd = read(fd, buffer, 1024);
 	close(fd);
 	fd = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
@@ -42,6 +41,5 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fd);
 		exit(100);
 	}
-	free(buffer);
 	return (1);
 }

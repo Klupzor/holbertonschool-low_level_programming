@@ -10,32 +10,30 @@
  * Return: Always 1.
  */
 
+
 int main(int argc, char **argv)
 {
 	int fd, fdw, rd = 0, ws, cs, csw;
 	char buffer[1024];
 
 	if (argc != 3)
-	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-		exit(97);
-	}
+	{ dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+	exit(97); }
 	fd = open(argv[1], O_RDONLY);
 	if (fd == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file  %s\n", argv[1]);
-		exit(98);
-	}
+	{ dprintf(STDERR_FILENO, "Error: Can't read from file  %s\n", argv[1]);
+	exit(98); }
 
 	fdw = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	do {
 		rd = read(fd, buffer, 1024);
+		if (fd == -1)
+		{ dprintf(STDERR_FILENO, "Error: Can't read from file  %s\n", argv[1]);
+		exit(98); }
 		ws = write(fdw, buffer, rd);
 		if (ws == -1)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't write to  %s\n", argv[2]);
-			exit(99);
-		}
+		{ dprintf(STDERR_FILENO, "Error: Can't write to  %s\n", argv[2]);
+		exit(99); }
 
 	} while (rd == 1024);
 

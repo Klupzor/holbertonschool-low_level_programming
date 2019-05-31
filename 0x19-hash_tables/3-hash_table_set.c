@@ -1,5 +1,6 @@
 #include "hash_tables.h"
 
+
 /**
  * hash_table_set - Set new node to hash table
  *
@@ -26,7 +27,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 
 	if (tmp)
+	{
+		free(tmp->value);
 		tmp->value = strdup(value);
+	}
 	else
 	{
 		node = (hash_node_t *) malloc(sizeof(hash_node_t));

@@ -15,7 +15,7 @@ void hash_table_print(const hash_table_t *ht)
 	if (!ht)
 		exit(12);
 	printf("{");
-	for (index = 0 ; index <= ht->size ; index++)
+	for (index = 0 ; index < ht->size ; index++)
 	{
 		tmp = ht->array[index];
 		while (tmp)

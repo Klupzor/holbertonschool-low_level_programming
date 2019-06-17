@@ -9,18 +9,21 @@ void bubble_sort(int *array, size_t size)
 	int tmp, changed;
 	size_t i;
 
-	do {
-		changed = 0;
-		for (i = 0 ; i < size - 1 ; i++)
-		{
-			if (array[i] > array[i + 1])
+	if (size > 1)
+	{
+		do {
+			changed = 0;
+			for (i = 0 ; i < size - 1 ; i++)
 			{
-				tmp = array[i];
-				array[i] = array[i + 1];
-				array[i + 1] = tmp;
-				changed = 1;
-				print_array(array, size);
+				if (array[i] > array[i + 1])
+				{
+					tmp = array[i];
+					array[i] = array[i + 1];
+					array[i + 1] = tmp;
+					changed = 1;
+					print_array(array, size);
+				}
 			}
-		}
-	} while (changed == 1);
+		} while (changed == 1);
+	}
 }

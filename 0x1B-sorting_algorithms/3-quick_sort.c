@@ -1,4 +1,4 @@
-#include "sort.h"
+nclude "sort.h"
 unsigned int partition(int *array, unsigned int low, unsigned int high,
 		       size_t size);
 void sort(int *array, unsigned int low, unsigned int high, size_t size);
@@ -16,7 +16,6 @@ void quick_sort(int *array, size_t size)
 	if (size <= 1 || array == NULL)
 		return;
 	sort(array, 0, size - 1, size);
-	print_array(array, size);
 }
 
 /**
@@ -61,8 +60,6 @@ unsigned int partition(int *array, unsigned int low, unsigned int high,
 	for (j = low; j < high; j++)
 		if (array[j] < pivot)
 		{
-			if (i != j)
-				print_array(array, size);
 			tmp = array[i];
 			array[i] = array[j];
 			array[j] = tmp;
@@ -73,5 +70,7 @@ unsigned int partition(int *array, unsigned int low, unsigned int high,
 	tmp = array[i];
 	array[i] = array[high];
 	array[high] = tmp;
+	if (i != high)
+		print_array(array, size);
 	return (i);
 }

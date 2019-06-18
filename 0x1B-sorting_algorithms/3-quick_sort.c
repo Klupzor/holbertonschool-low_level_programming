@@ -1,4 +1,4 @@
-nclude "sort.h"
+#include "sort.h"
 unsigned int partition(int *array, unsigned int low, unsigned int high,
 		       size_t size);
 void sort(int *array, unsigned int low, unsigned int high, size_t size);

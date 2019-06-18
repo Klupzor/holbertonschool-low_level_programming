@@ -60,17 +60,21 @@ unsigned int partition(int *array, unsigned int low, unsigned int high,
 	for (j = low; j < high; j++)
 		if (array[j] < pivot)
 		{
-			tmp = array[i];
-			array[i] = array[j];
-			array[j] = tmp;
 			if (i != j)
+			{
+				tmp = array[i];
+				array[i] = array[j];
+				array[j] = tmp;
 				print_array(array, size);
+			}
 			i++;
 		}
-	tmp = array[i];
-	array[i] = array[high];
-	array[high] = tmp;
 	if (i != high)
+	{
+		tmp = array[i];
+		array[i] = array[high];
+		array[high] = tmp;
 		print_array(array, size);
+	}
 	return (i);
 }

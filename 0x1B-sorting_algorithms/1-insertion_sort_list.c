@@ -7,6 +7,7 @@ void insertion_sort_list(listint_t **list)
 {
 	listint_t *head, *pre, *num;
 	int condition = 0;
+
 	if (list)
 		head  = *list;
 	else

@@ -5,4 +5,4 @@ NAME=holberton
 %.o: %.c
 	$(CC) -c -o $@ $<
 all: $(OBJ)
-	$(CC) -c -o $(NAME)
+	$(CC) $(OBJ) -o $(NAME)

@@ -2,5 +2,6 @@ CC=gcc
 SRC=main.c holberton.c
 OBJ=$(SRC:.c=.o)
 NAME=holberton
+%.o: %.c $(DEPS)
 all: $(OBJ)
-	$(CC) -o $(NAME)
+	$(CC) -c -o $(NAME)

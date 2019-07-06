@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-5-main
+Island Perimeter
 """
 
 
@@ -12,7 +12,6 @@ def island_perimeter(grid):
     xlen = len(grid[0])
     xsize = 0
     ysize = 0
-    print("len y: {} len x: {}".format(ylen, xlen))
 
     for xs in grid:
         while (x < xlen):

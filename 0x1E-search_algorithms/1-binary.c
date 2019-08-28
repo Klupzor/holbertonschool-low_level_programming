@@ -40,6 +40,8 @@ int binary_search(int *array, size_t size, int value)
 {
 	size_t min, max, n;
 
+	if (!array)
+		return (-1);
 	min = 0;
 	max = size - 1;
 	while (min <= max)

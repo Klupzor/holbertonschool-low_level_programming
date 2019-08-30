@@ -54,13 +54,13 @@ void printSearch(int *array, size_t min, size_t max)
 
 int exponential_search(int *array, size_t size, int value)
 {
+	size_t i, min, max, n;
+
 	if (!array)
 		return (-1);
 
 	if (array[0] == value)
 		return (0);
-
-	size_t i, min, max, n;
 
 	i = 1;
 	while (i < size && array[i] <= value)
